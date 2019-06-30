@@ -305,6 +305,9 @@ bool avanzar_iterador(hash_iter_t* iterador){
 }
 
 const char* elemento_actual(const hash_iter_t* iterador){
+	if(!iterador) return NULL;
+	if(iter_lista_esta_al_final(iterador->iterador_lista)) return NULL;
+
 	nodo_hash_t* nodo_hash = iter_lista_elemento_actual(iterador->iterador_lista);
 	return nodo_hash->clave;
 }

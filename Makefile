@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS = -g -std=c99 -Wall -Wconversion -Wtype-limits -pedantic -Werror -O0
-HEADERS = hash.h Lista/lista_se.h iterador.h
-ZIPFILES = abb.c abb.h pruebas_mohamed.c README.txt tda_arbol.pdf minipruebas_abb.c
+HEADERS = hash.h Lista/lista_se.h Lista/iterador.h
+ZIPFILES = hash.c hash.h pruebas_mohamed.c README.txt tda_hash.pdf minipruebas_hash.c Lista/lista_se.c Lista/lista_se.h Lista/iterador.c Lista/iterador.h
 OBJ = hash.o Lista/lista_se.o Lista/iterador.o
 
 EXEC = hash
