@@ -4,7 +4,7 @@
 #define AVANZAR_ITER_OK 0
 #define AVANZAR_ITER_ERROR -1
 
-iterador_t* crear(lista_se_t* lista){
+iterador_t* iter_lista_crear(lista_se_t* lista){
 	if(!lista) return NULL;
 
 	iterador_t* nuevo_iter = malloc(sizeof(iterador_t));
@@ -17,7 +17,7 @@ iterador_t* crear(lista_se_t* lista){
 	return nuevo_iter;
 }
 
-void* elemento_actual(iterador_t* iterador){
+void* iter_lista_elemento_actual(iterador_t* iterador){
 	if(!iterador) return NULL;
 	if(!iterador->nodo_actual) return NULL;
 
@@ -32,7 +32,7 @@ bool tiene_siguiente(iterador_t* iterador){
 	return (iterador->nodo_actual->siguiente != NULL);
 }
 
-int avanzar(iterador_t* iterador){
+int iter_lista_avanzar(iterador_t* iterador){
 	if(!iterador) return AVANZAR_ITER_ERROR;
 
 	if(!iterador->nodo_actual) return AVANZAR_ITER_ERROR;
@@ -43,7 +43,7 @@ int avanzar(iterador_t* iterador){
 	return AVANZAR_ITER_OK;
 }
 
-bool iter_esta_al_final(iterador_t* iterador){
+bool iter_lista_esta_al_final(iterador_t* iterador){
 	if(!iterador) return true;
 
 	return (!iterador->nodo_actual);
@@ -58,7 +58,7 @@ int reiniciar_iterador(iterador_t* iterador){
 	return 1;
 }
 
-int destruir(iterador_t* iterador){
+int iter_lista_destruir(iterador_t* iterador){
 	if(!iterador) return DESTRUIR_ITER_ERROR;
 	free(iterador);
 
@@ -66,7 +66,7 @@ int destruir(iterador_t* iterador){
 }
 
 
-void* iter_borrar(iterador_t* iterador){
+void* iter_lista_borrar(iterador_t* iterador){
 	if(!iterador) return NULL;
 
 	void* dato_a_eliminar = NULL;

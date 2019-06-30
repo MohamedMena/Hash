@@ -3,6 +3,7 @@
 
 #include <stdlib.h>
 #include <stdbool.h>
+#include "Lista/lista_se.h"
 
 typedef struct hash hash_t;
 typedef struct hash_iter hash_iter_t;

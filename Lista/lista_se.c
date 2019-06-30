@@ -138,7 +138,7 @@ size_t elementos(lista_se_t* lista){
 	return lista->cantidad;
 }
 
-int destruir_lista(lista_se_t* lista, void destruir_dato(void*), void destruir_dato_hash(void*)){
+int destruir_lista(lista_se_t* lista, void destruir_dato(void *, void destruir_dato_hash(void*)), void destruir_dato_hash(void*)){
 	if(!lista) return DESTRUIR_LISTA_ERROR;
 
 	void* elemento_a_borrar = NULL;

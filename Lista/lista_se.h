@@ -73,6 +73,6 @@ size_t elementos(lista_se_t* lista);
  * Libera la memoria reservada por los nodos presentes en la lista y luego la memoria reservada por la estructura.
  * Devuelve 0 si pudo destruirla o -1 si no pudo.
  */
-int destruir_lista(lista_se_t* lista, void destruir_dato(void *, void destruir_dato_hash(void*)));
+int destruir_lista(lista_se_t* lista, void destruir_dato(void *, void destruir_dato_hash(void*)), void destruir_dato_hash(void*));
 
 #endif /* __LISTA_SE_H__ */
